@@ -23,7 +23,7 @@ int main(void)
 
     char criminal[256];
     printf("your criminal?");
-    scanf_s("%s", criminal, sizeof(name));
+    scanf_s("%s", criminal, sizeof(criminal));
 
     // 조서 내용 출력
     printf("\n\n ---- information ---- \n\n");
