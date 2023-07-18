@@ -58,7 +58,7 @@ int main(void)
     char c = 'A';
     printf("%c\n", c);
 
-    // 문자열 끝에는 끝을 의미하는 NULL문자(\0)이 포함되어야 한다.
+    // 문자열 끝에는 끝을 의미하는 NULL문자(\0)이 포함되어 있다.
     char str[7] = "coding"; // [c] [o] [d] [i] [n] [g] [\0]
     printf("%s\n", str);
 
@@ -77,8 +77,39 @@ int main(void)
     // 한글은 한글자 2바이트
     // char = 1바이트
     
+    char c_aray[7] = {'c','o','d','i','n','g','\0'};
+    printf("%s\n",c_aray);
 
+    char c_arrai[10] = {'c','o','d','i','n','g'};
+    for(int i = 0 ; i < sizeof(c_arrai) ; i++)
+    {
+        printf("%c\n",c_arrai[i]);
+    }
+    // $d로 출력시 ASCII 코드로 출력됨
+    for(int i = 0 ; i < sizeof(c_arrai) ; i++)
+    {
+        printf("%d\n",c_arrai[i]);
+    }
 
+    // 문자열 입력 받기 : 경찰서 조서 쓰기 예제
+    // 사용하려는 문자열의 크기보다 넉넉하게 잡으면 사용상에 문제가 없음
+    char name[256];
+    printf("what's your name?\n");
+    scanf("%s", name, sizeof(name));
+    printf("%s\n",name);
+
+    // 아스키코드
+    // 7-bit, 128개 코드 (0~127)
+    // ex) a = 97
+    // ex) A = 65
+    // ex) 0 = 8
+    printf("%c\n", 'a');
+    printf("%d\n", 'a');
+    printf("%c\n", 'A');
+    printf("%d\n", 'A');
+
+    for (int i = 0 ; i < 128 ; i++)
+        printf("%d = %c\n",i, i);
 
     return 0;
 }
