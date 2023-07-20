@@ -102,7 +102,7 @@ int main(void)
     printf(" arr's value's address of real value : %d\n", *arr); // *(arr+o)과 같다
     printf(" arr[0]'s real value : %d\n", *&arr[0]);
     // *& == 해당 변수의 주소의 값과 같은 의미라서 아무것도 안쓰는것과 같다
-    // &는 주고이고 *는 그 주소의 값이다.
+    // &는 주소이고 *는 그 주소의 값이다.
     // *&arr[0] == arr[0] = *&*&*&*&*&*&*&*&*&*&*&*&*&arr[0]
 
     return 0;
