@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<time.h>
-
+#include<stdlib.h>
     // 동물 카드 뒤집기 게임
     // 사용자로 부터 2개의 입력값을 받아서 --> 같은 동물을 찾으면 카드를 뒤집고 틀렸다면 원상복구
     // 모든 동물 쌍을 찾으면 게임 종료
@@ -18,6 +18,7 @@ void printQuestion();
 int getEmptyPosition();
 int conv_pos_y(int y);
 int conv_pos_x(int x);
+int foundAllAnimals();
 
 
 int main(void)
@@ -56,8 +57,27 @@ int main(void)
         if (checkAnimal[firstSelect_x][firstSelect_y] == 0 && checkAnimal[secondSelect_x][secondSelect_y] == 0
             &&
             arrayAnimal[firstSelect_x][firstSelect_y] == arrayAnimal[secondSelect_x][secondSelect_y])
+        {
+            printf("\n\nbinggo !! : Search %s \n\n", strAnimall[firstSelect_x][firstSelect_y]);
+            checkAnimal[firstSelect_x][firstSelect_y] = 1;
+            checkAnimal[secondSelect_x][secondSelect_y] = 1;
+        }
         // 다른 동물인 경우
         else
+        {
+            printf("DDaeng!!! (wrong or 뒤집힌카드) \n\n");
+            printf(" %d : %s\n", select1, strAnimall[arrayAnimal[firstSelect_x][firstSelect_y]]);
+            printf(" %d : %s\n", select2, strAnimall[arrayAnimal[secondSelect_x][secondSelect_y]]);
+            printf("\n\n");
+            failCount++;
+        }
+        // 모든 동물을 찾은경우 == 1
+        if (foundAllAnimals()==1)
+        {
+            printf("\n\n Game over!! \n\n");
+            printf(" fail = %d\n",failCount);
+            break;
+        }
     }
 
 
@@ -179,3 +199,19 @@ void printQuestion()
         }
     }
 }
+
+int foundAllAnimals()
+{
+    for (int i = 0 ; i<4 ; i ++)
+    {
+        for (int j = 0 ; j < 5 ; j++)
+        {
+            if (checkAnimal[i][j] == 0)
+            {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+
