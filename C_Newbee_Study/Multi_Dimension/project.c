@@ -23,6 +23,7 @@ int foundAllAnimals();
 
 int main(void)
 {
+    printf("is that walk?\n");
     srand(time(NULL));
     
     initAnimalArray();
@@ -193,10 +194,12 @@ void printQuestion()
             // 오답일경우 => 뒷면 == 위치를 나타내는 숫자
             else
             {
-                printf("%8d", seq);
+                printf("%8d", seq++);
             }
-
+            seq++;
         }
+        printf("\n");
+
     }
 }
 
