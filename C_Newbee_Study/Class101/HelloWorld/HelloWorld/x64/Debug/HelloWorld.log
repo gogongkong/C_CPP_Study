@@ -1,0 +1,5 @@
+﻿  HelloWorld.cpp
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\HelloWorld\HelloWorld\HelloWorld.cpp(11,6): warning C4101: '_name': unreferenced local variable
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\HelloWorld\HelloWorld\HelloWorld.cpp(14,6): warning C4101: 'myspace100': unreferenced local variable
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\HelloWorld\HelloWorld\HelloWorld.cpp(13,6): warning C4101: 'c0mputer': unreferenced local variable
+  HelloWorld.vcxproj -> C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\HelloWorld\x64\Debug\HelloWorld.exe
