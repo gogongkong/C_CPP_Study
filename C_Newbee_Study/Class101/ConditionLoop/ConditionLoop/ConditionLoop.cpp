@@ -1,5 +1,13 @@
 #include<cstdio>
 
+int getInput() {
+	int num;
+	printf("숫자를입력하세요 : ");
+	fseek(stdin, 0, SEEK_END);// scanf가 입력된 값을 잘못 해석하는 경우가 생긴다 그걸 방지하기 위해 아래의 코드를 작성한다.
+	scanf_s("%d", &num);
+	return num;
+}
+
 int main() {
 	/*
 	조건문 / 반복문
@@ -65,12 +73,55 @@ int main() {
 	// 연습프로그래밍
 	// 사용자로부터 숫자를 입력받아
 	// 입력받은 숫자만큼 A를 출력하는 프로그램 작성
-	int num;
-	printf("숫자를입력하세요 : ");
-	scanf_s("%d", &num);
+	int num = getInput();
 
-	for (int i = 0; i <= num; i++) {
-		printf("A");
+	if (num <= 0) {
+		printf("숫자를 잘 못 입력하였습니다.\n");
+	}
+	else {
+		for (int i = 0; i <= num; i++) {
+			printf("A");
+		}
+	}
+	printf("\n");
+
+	num = getInput();
+	if (num <= 0) {
+		printf("숫자를 잘못 입력하였습니다.\n");
+	}
+	else {
+		for (int i = 0; i < num; i++) {
+			printf("B");
+		}
+	}
+	printf("\n");
+
+	int input1, input2, operation;
+
+	printf("input first number : ");
+	scanf_s("%d", &input1);
+
+	printf("input second number : ");
+	scanf_s("%d", &input2);
+
+	printf("Operation Number? : ");
+	scanf_s("%d", &operation);
+
+	if (operation == 0) {
+		printf("%d\n", input1 + input2);
+	}
+	else if (operation == 1) {
+		printf("%d\n", input1 - input2);
+	}
+	else if (operation == 2) {
+		int a = input1;
+		for (int i = 0; i < input2; i++) {
+			a = a * input1;
+		}
+		printf("%d\n", a);
+	}
+	else {
+		printf("잘못된 숫자입니다.\n");
 	}
 	return 0;
 }
