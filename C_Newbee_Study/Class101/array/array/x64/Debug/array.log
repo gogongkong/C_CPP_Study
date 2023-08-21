@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\array\array\main.cpp(117,6): warning C4101: 'arr2': unreferenced local variable
+  array.vcxproj -> C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\array\x64\Debug\array.exe

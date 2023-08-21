@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\Structtypecasting\Structtypecasting\main.cpp(23,16): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\Structtypecasting\Structtypecasting\main.cpp(41,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\Structtypecasting\Structtypecasting\main.cpp(46,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\Structtypecasting\Structtypecasting\main.cpp(54,16): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\Structtypecasting\Structtypecasting\main.cpp(55,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\Structtypecasting\Structtypecasting\main.cpp(72,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Structtypecasting.vcxproj -> C:\Users\Eddy\Documents\GitHub\C_CPP_Study\C_Newbee_Study\Class101\Structtypecasting\x64\Debug\Structtypecasting.exe
